@@ -6,7 +6,6 @@ const PREPARATION_MINUTES_PER_LAYER = 2;
  * @constant
  * @type {number}
 */
-
 export const EXPECTED_MINUTES_IN_OVEN  = 40;
 
 /**
