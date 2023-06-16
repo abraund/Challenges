@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(226, 236, 255);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+
+}
+
+.card {
+    width: 275px;
+    height: 420px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: inset(40px) -5px -5px;
+}
+
+.blurb {
+    padding: 5px 20px;
+    text-align: center;
+}
+
+.blurb h3 {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.blurb p {
+    font-size: 12px;
+    font-weight: 400;
+    color: hsl(220, 15%, 55%)
+}
