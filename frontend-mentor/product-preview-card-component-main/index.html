@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://kit.fontawesome.com/59caee2008.js" crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href = "https://fonts.googleapis.com/css2?family=Fraunces&family=Montserrat">
   <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Product preview card component</title>
 </head>
 <body>
   <div class="container">
+    <div class="card">
+
+    
     <picture>
       <source srcset="images/image-product-desktop.jpg" 
               media="(min-width: 960px)" />
@@ -24,12 +27,14 @@
     
       <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL. </p>
     
-      <div class="discounted-price">$149.99</div>
-      <div class="original-price">$169.99</div>
+      <div class="price">
+        <div class="discounted-price">$149.99</div>
+        <div class="original-price">$169.99</div>
+      </div>
       
       <btn>Add to Cart</btn>
     </div>
-
+  </div>
   </div>
 </body>
 </html>
