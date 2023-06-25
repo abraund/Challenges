@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;800&display=swap');
+
+p {
+    margin: 0;
+}
+
+:root {
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --colour-white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+    background: hsl(216, 14%, 93%);
+}
+
+.container {
+    padding: 0.8em;
+    min-width: 375px;
+    max-width: 700px;
+    background: white;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header--title {
+    font-size: 1.6rem;
+}
+
+.header--count {
+    font-size: 1.3rem;
+    background-color: var(--blue);
+    color: white;
+    padding: 0em 0.5em;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-inline: 0.6em;
+}
+
+
+.header button{
+    display: inline-block;
+    margin-left: auto;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 0.9rem;
+}
+.header button:hover{
+    text-decoration: underline;
+}
+
+.notification-list{
+}
+
+.notification{
+    color: var(--dark-grayish-blue);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-auto-flow: row;
+    gap: 5px 10px;
+    justify-content: stretch;
+    margin: 0.6em 0em;
+    padding: 0.8em;
+}
+
+.notification--profile {
+    height: 2.5em;
+    grid-row: span 2;
+}
+
+.notification > p {
+    grid-column: 2;
+}
+
+.notification--user{
+    font-weight: 800;
+}
+
+.notification--user span{
+    font-weight: 800;
+}
+
+.notification--club,
+.notification--club:link,
+.notification--club:visited 
+{
+    color: hsl(219, 87%, 37%);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.notification--post,
+.notification--post:link,
+.notification--post:visited 
+{
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.notification-unread {
+    background: hsl(202, 44%, 96%);;
+}
+.notification-unread > p::after{
+    content: '●';
+    color: var(--red);
+} 
+
+.notification--ago {
+    color: var(--grayish-blue);
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.notification--reply {
+    color: var(--dark-grayish-blue);
+    border: solid 2px var(--light-grayish-blue-2);
+    padding: 1em;
+    grid-column: 2;
+}
+
+.notification--reply:link{
+    text-decoration: none;
+}
+
+.notification--picture {
+    background: url('./assets/images/image-chess.webp') no-repeat;
+    background-size: 2.5em;
+    grid-column: 3;
+    grid-row: span 2;
+    width: 2.5em;
+    height: 2.5em;
+}
