@@ -55,7 +55,7 @@ body {
 }
 
 
-.header button{
+#mark-all-as-read{
     display: inline-block;
     margin-left: auto;
     padding: 0;
@@ -63,8 +63,9 @@ body {
     background: none;
     font-size: 0.9rem;
 }
-.header button:hover{
+#mark-all-as-read:hover{
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .notification-list{
