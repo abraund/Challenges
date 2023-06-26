@@ -70,5 +70,13 @@ body {
 @media (min-width: 1000px) {
     .container {
         display: flex;
-    }   
+    }
+    
+    body {
+        height: 100vh;
+    }
+
+    .card__blurb {
+        margin-bottom: 3em;
+    }
 }
