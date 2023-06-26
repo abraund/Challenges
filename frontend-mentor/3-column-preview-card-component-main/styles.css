@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+ }
+
+.card {
+    display: grid;
+    gap: 2em;
+    padding: 3.5em;
+    font-size: 0.9375rem;
+    width: 225px;
+}
+
+.card::after {
+    content: 'Learn More';
+    padding: 1em 2em;
+    border-radius: 1.5em;
+    background: white;
+    mix-blend-mode: screen;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    width: min-content;
+    white-space: nowrap;
+}
+
+.card--luxury {
+    background: hsl(179, 100%, 13%);
+}
+
+.card--luxury:before {
+    content: url(./images/icon-luxury.svg)
+}
+
+.card--sedans {
+    background: hsl(31, 77%, 52%);
+}
+
+.card--sedans:before {
+    content: url(./images/icon-sedans.svg)
+}
+
+.card--suvs {
+    background: hsl(184, 100%, 22%);
+}
+
+.card--suvs:before {
+    content: url(./images/icon-suvs.svg)
+}
+
+.card__title { 
+    font-family: 'Big Shoulders Display', cursive;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+}
+
+.card__blurb {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.5);
+    line-height: 1.8em;
+}
+
+@media (min-width: 1000px) {
+    .container {
+        display: flex;
+    }   
+}
