@@ -158,10 +158,14 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 3rem;
-        border-radius: 1.8rem 0 0 1.8rem;
+        border-radius: 1.8rem 1.8rem 1.8rem 1.8rem;
 
     }
     .result__overall-container {
         border-radius: 1.8em;
+    }
+
+    .result__breakdown-container {
+        padding: 2rem;
     }
 }
