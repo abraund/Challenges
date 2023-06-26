@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+body, h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.result {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+.result__overall-container{
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em 3em 3em 3em;
+    border-radius: 0 0 1.8em 1.8em;
+    text-align: center;
+    gap: 1rem
+}
+
+.result__your-result{
+    color: hsl(241, 100%, 89%);
+    font-size: 1.125rem;
+}
+
+.result__percent-container
+{
+    background: linear-gradient( hsla(256, 72%, 46%, 1),  hsla(241, 72%, 46%, 0));
+    padding: 2em;
+    border-radius: 100%;
+    width: 6em;
+    display: grid;
+    place-content: center;
+}
+
+.result__percent-score{
+    color: hsl(221, 100%, 96%);
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.result__percent-denominator{
+    color:  hsl(241, 100%, 89%);    
+}
+
+.result__judgement{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(221, 100%, 96%);
+    margin-bottom: 0.25em;
+}
+
+.result__explanation{
+    color:  hsl(241, 100%, 89%);    
+}
+
+.result__breakdown-container {
+    padding: 1rem;
+}
+
+.result__summary {
+    font-size: 1.25rem;
+    margin: 0.5em 0;
+}
+
+.result__skill {
+    font-weight: 700;
+    border-radius: 0.75em;
+    padding: 1.1rem 0.8rem;
+    display: flex;
+    gap: 1rem;
+    margin: 1.2rem 0;
+}
+
+.result__skill-label {
+}
+
+.result__skill-score {
+    margin-left: auto;
+    color: hsl(224, 30%, 27%);
+}
+
+.result__skill-percent {
+    color: hsla(224, 30%, 27%, 50%);
+}
+
+.result__skill_reaction::before {
+    content: '\ea0b';
+    font-family: 'Material Symbols Outlined', sans-serif;
+}
+
+
+.result__skill_reaction {
+    color:  hsl(0, 100%, 67%);
+    background:  hsla(0, 100%, 67%, 10%);
+}
+
+.result__skill_memory::before {
+    content: '\e10e';
+    font-family: 'Material Symbols Outlined', sans-serif;;
+}
+
+.result__skill_memory {
+    color:  hsl(39, 100%, 56%);
+    background:  hsla(39, 100%, 56%, 10%);
+}
+
+.result__skill_verbal::before {
+    content: '\ef58';
+    font-family: 'Material Symbols Outlined', sans-serif;;
+}
+
+.result__skill_verbal {
+    color:  hsl(166, 100%, 37%);
+    background:  hsla(166, 100%, 37%, 10%);
+}
+
+.result__skill_visual::before {
+    content: '\e8f4';
+    font-family: 'Material Symbols Outlined', sans-serif;;
+}
+
+.result__skill_visual {
+    color: hsl(234, 85%, 45%);
+    background: hsla(234, 85%, 45%, 10%);
+}
+
+.result__button {
+    color: white;
+    background: hsl(224, 30%, 27%);
+    border-radius: 3rem;
+    padding: 1.1em 0;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
