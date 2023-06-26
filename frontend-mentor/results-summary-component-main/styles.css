@@ -3,18 +3,27 @@
 body, h2 {
     padding: 0;
     margin: 0;
+
+}
+
+body {
+    background: hsl(207, 27%, 94%);
 }
 
 .result {
     font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 500;
+    max-width: 900px;
+    background: white;
 }
 
-.result__overall-container{
+.result__overall-container
+{
     background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     padding: 1.5em 3em 3em 3em;
     border-radius: 0 0 1.8em 1.8em;
     text-align: center;
@@ -137,4 +146,22 @@ body, h2 {
     display: inline-block;
     text-align: center;
     text-decoration: none;
+}
+
+@media (min-width: 800px){
+    body {
+        display: grid;
+        place-content: center;
+        height: 100vh;
+    }    
+    .result {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 3rem;
+        border-radius: 1.8rem 0 0 1.8rem;
+
+    }
+    .result__overall-container {
+        border-radius: 1.8em;
+    }
 }
