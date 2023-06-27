@@ -16,11 +16,11 @@ body {
     display: grid;
     place-content: center;
     height: 100vh;
-    background: hsl(249, 84%, 5%);
+    background: rgba(19,21,25,1);
 }
 
 .feedback {
-    background: linear-gradient( hsl(212, 13%, 25%), hsl(216, 12%, 8%));
+    background: linear-gradient( rgba(34,42,51,1), rgba(34,40,49,1));
     padding: 1.5rem;
     width: 300px;
     height: 350px;
@@ -38,7 +38,7 @@ body {
 
 .feedback__rating::before {
     content: url(./images/icon-star.svg);
-    background:  hsl(214, 16%, 28%);
+    background:  rgba(37,48,55,1);
     border-radius: 50%;
     height: 2.5rem;
     width: 2.5rem;
@@ -65,7 +65,7 @@ body {
 }
 
 .feedback__option {
-    background-color: hsl(213, 19%, 18%);
+    background-color: rgba(37,48,55,1);
     border-radius: 50%;
     padding-top: 0.25em; /* space under the font descender, for this font + where we're baseline to ascender probably we want to shift down anyway */
     height: 2.5rem;
@@ -119,7 +119,7 @@ body {
 
 .feedback__selection {
     color: hsl(25, 97%, 53%);
-    background-color: hsl(213, 17%, 21%);
+    background-color: rgba(37,48,55,1);
     padding: 0.5rem;
     padding-top: 0.7rem;
     border-radius: 1rem;
