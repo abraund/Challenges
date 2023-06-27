@@ -1,0 +1,81 @@
+*, *::before, *::after{
+    margin:0;
+    padding: 0;
+}
+
+/*
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+*/
+
+body {
+    display: grid;
+    place-items: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+    background: hsl(217, 54%, 11%);
+}
+
+.card {
+    background: hsl(216, 50%, 16%);
+    padding: 1.5rem;
+}
+
+.card__hero {
+
+}
+
+.card__hero:hover {
+    background: red;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card__blurb {
+
+}
+
+.card__price::before {
+    content: url(./images/icon-ethereum.svg);
+}
+
+.card__price {
+    color: hsl(178, 100%, 50%);
+    font-weight: 400;
+}
+
+
+.card__time::before {
+    content: url(./images/icon-clock.svg);
+}
+
+.card__time {
+
+}
+
+
+
+.card__ownership::before {
+    content: url(./images/image-avatar.png);
+}
+
+.card__ownership {
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-color: hsl(215, 32%, 27%);
+}
+
+.card__owner {
+    color: white;
+}
