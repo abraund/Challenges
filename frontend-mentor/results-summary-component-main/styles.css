@@ -148,6 +148,10 @@ body {
     text-decoration: none;
 }
 
+.result__button:hover {
+    background: hsl(241, 81%, 54%);
+}
+
 @media (min-width: 800px){
     body {
         display: grid;
