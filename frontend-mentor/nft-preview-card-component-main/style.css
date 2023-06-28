@@ -4,18 +4,6 @@
     box-sizing: border-box;
 }
 
-/*
-- Soft blue: hsl(215, 51%, 70%)
-- Cyan: hsl(178, 100%, 50%)
-
-### Neutral
-
-- Very dark blue (main BG): hsl(217, 54%, 11%)
-- Very dark blue (card BG): hsl(216, 50%, 16%)
-- Very dark blue (line): hsl(215, 32%, 27%)
-- White: hsl(0, 0%, 100%)
-*/
-
 body {
     display: grid;
     place-items: center;
@@ -24,13 +12,12 @@ body {
     color: hsl(215, 51%, 70%);
     background: hsl(217, 54%, 11%);
     height: 100vh;
-    
 }
 
 .card {
     background: hsl(216, 50%, 16%);
     padding: 1.5rem;
-    width: 275px;
+    width: 300px;
     border-radius: 1em;
     display: grid;
     gap: 1em;
@@ -38,43 +25,50 @@ body {
 
 .card__hero {
     position: relative;
-    display: block;
 }
 
-/* .card__hero::before 
-{
-    content: url(./images/icon-view.svg);
-    position: absolute;
-    top: calc(50% - 24px);
-    left: calc(50% - 24px);
-} */
+.card__hero:hover {
+    cursor: pointer;
+}
 
-/* .card__hero::after  */
-.pseudo__after {
-    /* content: '\A'; */
-    display: inline-block;
+.card__hero::before 
+{
+    content: '\A';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background:  hsl(178, 100%, 50%);
+    opacity: 0.5;
+    border-radius: 0.5em;
     opacity: 0;
-    /* border-radius: 0.5em; */
 }
 
-/* .card__hero:hover::after  */
-.pseudo__after:hover
+.card__hero::after 
+{
+    content: url(./images/icon-view.svg);
+    position: absolute;
+    top: calc(50% - 24px);
+    left: calc(50% - 24px);
+    opacity: 0;
+}
+
+.card__hero:hover::before
 {
     opacity: 0.5;
 }
 
-.card__image {
-    max-width: 100%;
-    /* border-radius: 0.5em; */
+.card__hero:hover::after 
+{
+    opacity: 1;
 }
 
-
+.card__image {
+    display: block;
+    max-width: 100%;
+    border-radius: 0.5em;
+}
 
 .card__title {
     font-size: 1.5rem;
@@ -83,7 +77,8 @@ body {
 }
 
 .card__title:hover {
-    color: hsl(178, 100%, 50%);;
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 
 .card__blurb {
@@ -128,7 +123,6 @@ body {
     padding-top: 1em;
 }
 
-
 .card__avatar {
     width: 2em;
     height: 2em;
@@ -142,5 +136,6 @@ body {
 }
 
 .card__owner:hover {
-    color: hsl(178, 100%, 50%);;
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
