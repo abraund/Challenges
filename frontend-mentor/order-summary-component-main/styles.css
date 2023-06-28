@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: url(./images/pattern-background-desktop.svg) no-repeat hsl(225, 100%, 94%);
+    background-size: 100% 50%;
+    background-position: top;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    height: 100vh;
+}
+
+.card {
+    display: grid;
+    gap: 1rem;
+    max-width: 350px;
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.card::before {
+    content: '\A';
+    background: url(./images/illustration-hero.svg);
+    display: inline-block;
+    width: calc(100% + 1.5rem + 1.5rem);
+    aspect-ratio: 450 / 220;
+    position: relative;
+    top: -1rem;
+    left: -1.5rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card__title {
+    color: hsl(223, 47%, 23%);
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.card__blurb {
+    color: hsl(224, 23%, 55%);
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.card__order {
+    display: grid;
+    grid-template-areas: 
+    "icon plan change"
+    "icon price change";
+    align-items: center;
+    background: hsl(225, 100%, 98%);
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+.card__order::before {
+    content: url(./images/icon-music.svg);
+    grid-area: icon;
+}
+
+.card__plan {
+    grid-area: plan;
+    color: hsl(223, 47%, 23%);
+    font-weight: 700;
+}
+
+.card__price{
+    grid-area: price;
+    color: hsl(224, 23%, 55%);
+    font-weight: 700;
+}
+
+.card__change {
+    grid-area: change;
+    font-weight: 700;
+}
+
+.card__change:hover {
+    text-decoration: none;
+}
+
+.card__pay {
+    display: block;
+    width: 100%;
+    color: white;
+    background: hsl(245, 75%, 52%);
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow:  0px 1em 1em rgb(0 0 0 / 0.2);
+}
+
+.card__pay:hover {
+    cursor: pointer;
+    background: #766cf1;
+}
+
+.card__cancel {
+    display: block;
+    margin: 0 auto;
+    color: hsl(224, 23%, 55%);
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.card__cancel:hover {
+    cursor: pointer;
+    color: black;
+}
