@@ -99,11 +99,13 @@ body {
     padding: 1rem;
     border-radius: 0.75rem;
     box-shadow:  0px 1em 1em rgb(0 0 0 / 0.2);
+    transition: all .25s;
 }
 
 .card__pay:hover {
     cursor: pointer;
     background: #766cf1;
+    transition: all .25s;
 }
 
 .card__cancel {
@@ -112,9 +114,11 @@ body {
     color: hsl(224, 23%, 55%);
     font-weight: 700;
     padding: 1rem;
+    transition: all .25s;
 }
 
 .card__cancel:hover {
     cursor: pointer;
     color: black;
+    transition: all .25s;
 }
