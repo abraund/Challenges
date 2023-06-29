@@ -15,6 +15,8 @@ body {
     display: grid;
     place-items: center;
     background: hsl(233, 47%, 7%);
+    height: 100vh;
+    padding: 5rem;
 }
 
 .card {
@@ -95,34 +97,28 @@ body {
     text-transform: uppercase;
 }
 
-@media (min-width: 600px){
+@media (min-width: 1000px){
     .card {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* grid-template-areas: "sales image"; */
-        max-width: 80%;
-
+        max-width: 1200px;
     }
 
     .card__sales {
-        /* grid-area: sales; */
-        padding: minmax(5%, 20%);
+        display: grid;
+        place-items: center;
+        max-width: 500px;
+        grid-area: 1 / 1 / 2 / 2
     }
 
-    .card__hero {
-        grid-area: 1 / 2 / 2 / 3
-
-    }
-    
     .card__image {
         border-radius: 0 0.5rem 0.5rem 0 ;
-        /* grid-area: image; */
-        /* height: 100%; */
     }
 
     .card__headlines {
+        width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
