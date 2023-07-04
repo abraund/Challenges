@@ -42,7 +42,7 @@ body::after {
 
 .card::before {
     content: '';
-    background: url(/images/bg-pattern-card.svg);
+    background: url(images/bg-pattern-card.svg);
     display: block;
     height: 140px;
     border-radius: var(--card-radius) var(--card-radius) 0 0;
