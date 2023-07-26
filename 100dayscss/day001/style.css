@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.frame{
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(to top right, #43389f, #4ec6ca );
+}
+
+.font {
+    font-family: "Courier New", "Courier", sans-serif;
+    font-weight: 1000;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0.65em;
+}
+
+.font-large {
+    font-size: 6em;
+}
+
+.font-small {
+    font-size: 1.8em;
+}
