@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -9,13 +10,66 @@ body {
     height: 100vh;
 }
 
-.frame{
+.card{
+    display: grid;
+    place-items: center;
     height: 400px;
     width: 400px;
     background: linear-gradient(to top right, #43389f, #4ec6ca );
 }
 
-.font {
+.card__message {
+    display: grid;
+    place-items: center;
+}
+
+.card__numbers {
+    --number-height: 92px;
+    --number-stroke: 22px;
+    height: var(--number-height);
+    display: flex;
+}
+
+.card__number {
+    margin-left: -5px;
+    box-shadow: 0px 0px 15px 15px #a5a5a53f;
+}
+
+.card__one {
+    position: relative;
+    z-index: 3;
+}
+
+.card__one-stroke {
+    position: absolute;
+    background: white;
+    height: var(--number-stroke);
+    width: 40px;
+    color:red;
+    top: 9px;
+    left: -28px;
+    transform: rotate(-35deg);
+    z-index: 1;
+}
+
+.card__one-line {
+    height: 100%;
+    background: white;
+    width: var(--number-stroke);
+    z-index: 2;
+}
+
+.card__zero {
+    border: solid white var(--number-stroke);
+    border-radius: 50%;
+    width: calc(var(--number-height));
+}
+
+.card__zero--higher {
+    z-index: 1;
+}
+
+.card__text {
     font-family: "Courier New", "Courier", sans-serif;
     font-weight: 1000;
     color: white;
@@ -24,10 +78,10 @@ body {
     line-height: 0.65em;
 }
 
-.font-large {
-    font-size: 6em;
+.card__text--large {
+    font-size: 85px;
 }
 
-.font-small {
-    font-size: 1.8em;
+.card__text--small {
+    font-size: 25px;
 }
