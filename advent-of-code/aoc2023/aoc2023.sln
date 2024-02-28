@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Aoc2023", "Aoc2023.fsproj", "{DE20D4C2-2179-430E-8247-B317F77F795F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE20D4C2-2179-430E-8247-B317F77F795F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE20D4C2-2179-430E-8247-B317F77F795F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE20D4C2-2179-430E-8247-B317F77F795F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE20D4C2-2179-430E-8247-B317F77F795F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {238656FB-39DC-4E2A-A1F7-A98D6F5A9986}
+	EndGlobalSection
+EndGlobal
