@@ -25,8 +25,8 @@ let sumLines () =
     Assert.AreSame(answer, 125)
 
 [<TestMethod>]
-[<DeploymentItem("001-input.txt")>]
+[<DeploymentItem("001.txt")>]
 let outChallenge () =
-    let lines = File.ReadAllLines("001-input.txt")
+    let lines = File.ReadAllLines("001.txt")
     let answer = sumInputList lines
     System.Console.WriteLine answer

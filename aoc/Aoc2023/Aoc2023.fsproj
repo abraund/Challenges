@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="001-input.txt" />
+    <Content Include="001.txt" />
   </ItemGroup>
 
   <ItemGroup>
