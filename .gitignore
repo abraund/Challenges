@@ -217,3 +217,5 @@ AppPackages/
 *.fig
 *.xd
 .prettierignore
+
+.fake
