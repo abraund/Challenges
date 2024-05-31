@@ -6,33 +6,31 @@ using NUnit.Framework;
 
 public class Solution
 {
-    public int LengthOfLongestSubstring(string str)
+    public int LengthOfLongestSubstring(string s)
     {
-        var charsInWindow = new int[255];
-        Array.Fill(charsInWindow, -1);
-        var inputStr = str.AsSpan();
+        var charPositions = new int[255];
+        Array.Fill(charPositions, -1);
+        var str = s.AsSpan();
 
         var longestWord = 0;
-        var startOfWindow = 0;
-        for (var endOfWindow = 0; endOfWindow < inputStr.Length; endOfWindow++)
+        var left = 0;
+        for (var right = 0; right < str.Length; right++)
         {
-            var endChar = inputStr[endOfWindow];
-            var positionCharLastSeen = charsInWindow[endChar];
-            if(positionCharLastSeen != -1 || endOfWindow == inputStr.Length) {
-                longestWord = Math.Max(longestWord, endOfWindow - startOfWindow);
-                for(; startOfWindow <= positionCharLastSeen; startOfWindow++) {
-                    charsInWindow[inputStr[startOfWindow]] = -1;
+            var rightChar = str[right];
+            var findCharIndex = charPositions[rightChar];
+            if(findCharIndex != -1) {
+                longestWord = Math.Max(longestWord, right - left);
+                for(; left <= findCharIndex; left++) {
+                    charPositions[str[left]] = -1;
                 }
-                charsInWindow[endChar] = endOfWindow;
+                charPositions[rightChar] = right;
             }
             else {
-                charsInWindow[endChar] = endOfWindow;
+                charPositions[rightChar] = right;
             }
         }
 
-        var lastWord = inputStr.Length - startOfWindow;
-
-        return Math.Max(longestWord, lastWord);
+        return Math.Max(longestWord, str.Length - left);
     }
 }
 
@@ -51,14 +49,14 @@ public class Tests
     }
 
     [Test]
-    public void PwwKew(){
+    public void Pwwkew(){
         var len = new Solution().LengthOfLongestSubstring("pwwkew");
         Assert.That(len, Is.EqualTo(3));
     }
 
 
     [Test]
-    public void BigWSlide(){
+    public void BigSlide(){
         var len = new Solution().LengthOfLongestSubstring("ayzbycaz");
         Assert.That(len, Is.EqualTo(5));
     }
