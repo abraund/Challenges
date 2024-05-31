@@ -7,23 +7,22 @@ using NUnit.Framework;
 public class Solution
 {
     public int LengthOfLongestSubstring(string s)
-    {
+    {        
+        var str = s.AsSpan();
+
         var lastSeenCharPos = new int[255];
         Array.Fill(lastSeenCharPos, -1);
-        var str = s.AsSpan();
 
         var longestWord = 0;
         var left = 0;
         for (var right = 0; right < str.Length; right++)
         {
             var rightChar = str[right];
-            var findCharIndex = lastSeenCharPos[rightChar];
+            var charLastSeenPos = lastSeenCharPos[rightChar];
             
-            if(findCharIndex != -1) {
+            if(charLastSeenPos != -1 && charLastSeenPos >= left) {
                 longestWord = Math.Max(longestWord, right - left);
-                for(; left <= findCharIndex; left++) {
-                    lastSeenCharPos[str[left]] = -1;
-                }
+                left = charLastSeenPos + 1;
             }
 
             lastSeenCharPos[rightChar] = right;
