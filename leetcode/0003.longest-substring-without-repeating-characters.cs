@@ -10,22 +10,21 @@ public class Solution
     {        
         var str = s.AsSpan();
 
-        var lastSeenCharPos = new int[255];
-        Array.Fill(lastSeenCharPos, -1);
+        var lastSeenCharPosOffsetByOne = new int[255];
 
         var longestWord = 0;
         var left = 0;
         for (var right = 0; right < str.Length; right++)
         {
             var rightChar = str[right];
-            var charLastSeenPos = lastSeenCharPos[rightChar];
+            var charLastSeenPos = lastSeenCharPosOffsetByOne[rightChar] - 1;
             
-            if(charLastSeenPos != -1 && charLastSeenPos >= left) {
+            if(charLastSeenPos != - 1 && charLastSeenPos >= left) {
                 longestWord = Math.Max(longestWord, right - left);
                 left = charLastSeenPos + 1;
             }
 
-            lastSeenCharPos[rightChar] = right;
+            lastSeenCharPosOffsetByOne[rightChar] = right + 1;
         }
 
         return Math.Max(longestWord, str.Length - left);
