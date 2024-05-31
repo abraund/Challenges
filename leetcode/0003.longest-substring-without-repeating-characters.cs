@@ -8,8 +8,8 @@ public class Solution
 {
     public int LengthOfLongestSubstring(string s)
     {
-        var charPositions = new int[255];
-        Array.Fill(charPositions, -1);
+        var lastSeenCharPos = new int[255];
+        Array.Fill(lastSeenCharPos, -1);
         var str = s.AsSpan();
 
         var longestWord = 0;
@@ -17,17 +17,16 @@ public class Solution
         for (var right = 0; right < str.Length; right++)
         {
             var rightChar = str[right];
-            var findCharIndex = charPositions[rightChar];
+            var findCharIndex = lastSeenCharPos[rightChar];
+            
             if(findCharIndex != -1) {
                 longestWord = Math.Max(longestWord, right - left);
                 for(; left <= findCharIndex; left++) {
-                    charPositions[str[left]] = -1;
+                    lastSeenCharPos[str[left]] = -1;
                 }
-                charPositions[rightChar] = right;
             }
-            else {
-                charPositions[rightChar] = right;
-            }
+
+            lastSeenCharPos[rightChar] = right;
         }
 
         return Math.Max(longestWord, str.Length - left);
