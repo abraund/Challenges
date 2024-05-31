@@ -19,7 +19,7 @@ public class Solution
             var rightChar = str[right];
             var charLastSeenPos = lastSeenCharPosOffsetByOne[rightChar] - 1;
             
-            if(charLastSeenPos != - 1 && charLastSeenPos >= left) {
+            if(charLastSeenPos >= left) {
                 longestWord = Math.Max(longestWord, right - left);
                 left = charLastSeenPos + 1;
             }
