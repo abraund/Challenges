@@ -2,7 +2,6 @@ namespace neetcode
 {
     public class DuplicateInteger
     {
-
         public bool HasDuplicate(int[] nums)
         {
             var hash = new HashSet<int>();
