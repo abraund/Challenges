@@ -36,7 +36,7 @@ namespace neetcode
             // O(1)-ish
             // nLogn on perf, some sorting algorithms O(1): they cost memory but it doesn't grow with s & t
             // on the other hand some sorting algorithms do grow, so it may be worth writing one by hand
-            return s.OrderBy(x => x).ToString() == t.OrderBy(x => x).ToString();
+            return string.Join("", s.OrderBy(x => x)) == string.Join("", t.OrderBy(x => x));
         }
 
 
