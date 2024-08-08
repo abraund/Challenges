@@ -7,8 +7,7 @@ namespace neetcode
         public int[] TopKFrequent(int[] nums, int k)
         {
             var numToCount = new Dictionary<int, int>();
-
-
+            
             foreach (var num in nums)
             {
                 if (numToCount.TryGetValue(num, out var count))
