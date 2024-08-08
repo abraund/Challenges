@@ -7,19 +7,21 @@ namespace neetcode
         public int[] TopKFrequent(int[] nums, int k)
         {
             var numToCount = new Dictionary<int, int>();
-            var sortedCounts = new SortedSet<(int num, int count)>(
-                Comparer<(int num, int count)>.Create((a, b) => b.count - a.count == 0 ? a.num - b.num : b.count - a.count));
 
-            foreach (int num in nums)
+
+            foreach (var num in nums)
             {
                 if (numToCount.TryGetValue(num, out var count))
                     numToCount[num] = ++count;
                 else
                     numToCount[num] = count = 1;
-
-                sortedCounts.Remove((num, count - 1));
-                sortedCounts.Add((num, count));
             }
+
+            var sortedCounts = new SortedSet<(int num, int count)>(
+                Comparer<(int num, int count)>.Create((a, b) => b.count - a.count == 0 ? a.num - b.num : b.count - a.count));
+
+            foreach (var entry in numToCount)
+                sortedCounts.Add((entry.Key, entry.Value));
 
             return sortedCounts.Take(k).Select(x => x.num).ToArray();
         }
