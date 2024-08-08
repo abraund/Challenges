@@ -24,7 +24,6 @@ namespace neetcode
 
             return sortedCounts.Take(k).Select(x => x.num).ToArray();
         }
-        
 
         [Fact]
         public void TopKTest()
