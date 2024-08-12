@@ -1,5 +1,3 @@
-using System.Diagnostics;
-
 namespace neetcode;
 
 public class TwoSum
@@ -20,7 +18,7 @@ public class TwoSum
             }
         }
 
-        throw new UnreachableException();
+        throw new Exception("unreachable");
     }
         
 
