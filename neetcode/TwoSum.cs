@@ -2,45 +2,33 @@ using System.Diagnostics;
 
 namespace neetcode;
 
-public class MaxWaterContainer
+public class TwoSum
 {
-    public int MaxArea(int[] heights)
+    public int[] TwoSumImplm(int[] nums, int target)
     {
-        var maxArea = 0;
-
-        for (int left = 0; left < heights.Length; left++)
+        var valuesToPosition = new Dictionary<int, int>();
+        for (var currentPosition = 0; currentPosition < nums.Length; currentPosition++)
         {
-            var leftHeight = heights[left];
-            var leftMaxArea = 0;
-            for (int right = heights.Length - 1; right > left; right--)
+            var currentValue = nums[currentPosition];
+            if (valuesToPosition.TryGetValue(target - currentValue, out var otherPosition))
             {
-                var rightHeight = heights[right];
-
-                var area = Math.Min(leftHeight, rightHeight) * (right - left);
-                leftMaxArea = Math.Max(leftMaxArea, area);
-
-                if (rightHeight >= leftHeight)
-                    break;
+                return [otherPosition, currentPosition];
             }
-
-            maxArea = Math.Max(maxArea, leftMaxArea);
+            else
+            {
+                valuesToPosition[currentValue] = currentPosition;
+            }
         }
-        return maxArea;
-    }
 
+        throw new UnreachableException();
+    }
+        
 
     [Fact]
-    public void Test1()
+    public void TwoSumTest()
     {
-        var result = MaxArea([1, 7, 2, 5, 4, 7, 3, 6]);
-        Assert.Equal(36, result);
+        var result = TwoSumImplm([1, 2, 8, 4, 5, 10], 7);
+        Assert.Equal(1, result[0]);
+        Assert.Equal(4, result[1]);
     }
-
-    [Fact]
-    public void Test2()
-    {
-        var result = MaxArea([2, 2, 2]);
-        Assert.Equal(4, result);
-    }
-
 }
