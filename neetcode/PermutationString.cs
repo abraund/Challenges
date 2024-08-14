@@ -4,6 +4,12 @@ public class PermutationString
 {
     public bool CheckInclusion(string permutation, string str)
     {
+        // notes
+        // leetcode guy keeps a track of matches, the target is 26, as he moves his window he checks to see if the edges are matching
+        // he also pre-makes his window, as I did for a spell, not that the code came out better,
+        // he does also live off a single iterator, which with fixed size works find
+        // overall his code is a mess too
+
         var strAsSpan = str.AsSpan();
         var expectedLength = permutation.Length;
 
