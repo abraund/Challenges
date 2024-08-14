@@ -52,6 +52,28 @@ public class PermutationString
         return false;
     }
 
+    public bool CheckInclusion2(string permutation, string str)
+    {
+        if (permutation.Length > str.Length)
+            return false;
+
+        int[] expectedCount = new int[26], windowCount = new int[26];
+        foreach (var c in permutation)
+            expectedCount[c - 'a']++;
+
+        for (int i = 0; i < str.Length; i++)
+        {
+            windowCount[str[i] - 'a']++;
+            if (i >= permutation.Length)
+                windowCount[str[i - permutation.Length] - 'a']--;
+
+            if (windowCount.SequenceEqual(expectedCount))
+                return true;
+        }
+
+        return false;
+    }
+
 
     [Fact]
     public void Test1()
