@@ -2,7 +2,7 @@ using System.Linq;
 
 namespace neetcode;
 
-public class ValidatePartheses
+public class ValidateParentheses
 {
     public bool IsValid(string s)
     {
