@@ -4,7 +4,28 @@ public class EvaluateReversePolishNotation
 {
     public int EvalRPN(string[] tokens)
     {
-        return 0;
+        var stack = new Stack<int>();
+
+        foreach (var token in tokens)
+        {
+            if(int.TryParse(token, out var num))
+                stack.Push(num);
+            else
+            {
+                var right = stack.Pop();
+                var left = stack.Pop();
+                if (token == "-")
+                    stack.Push(left - right);
+                else if(token == "+")
+                    stack.Push(left + right);
+                else if(token == "*")
+                    stack.Push(left * right);
+                else if(token == "/")
+                    stack.Push(left / right);
+            }
+        }
+        
+        return stack.Pop();
     }
 
     [Fact]
