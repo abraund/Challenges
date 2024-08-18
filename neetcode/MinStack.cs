@@ -2,6 +2,13 @@ namespace neetcode;
 
 public class MinStack
 {
+    /*
+     * Notes, leetcode guy implements this by using 2 built in stacks
+     * (debateable that this is within the spirit)
+     * So he's got a stack representing the value, and a stack representing the min up until that point
+     * Think I prefer my own solution to be honest.
+     */
+
     private Node _root;
 
     public void Push(int val)
