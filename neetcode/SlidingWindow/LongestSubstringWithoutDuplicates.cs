@@ -1,4 +1,4 @@
-namespace neetcode;
+namespace Neetcode.SlidingWindow;
 
 public class LongestSubstringWithoutDuplicates
 {
@@ -10,7 +10,7 @@ public class LongestSubstringWithoutDuplicates
         var longest = 1;
         var charLastSeen = new int[256];
         Array.Fill(charLastSeen, -1);
-        
+
         var left = 0;
         var right = 1;
         charLastSeen[s[left]] = 0;
@@ -21,7 +21,7 @@ public class LongestSubstringWithoutDuplicates
                 left = charLastSeen[s[right]] + 1;
 
             charLastSeen[s[right]] = right;
-            longest = Math.Max(longest, (right - left) + 1);
+            longest = Math.Max(longest, right - left + 1);
             right++;
         }
 

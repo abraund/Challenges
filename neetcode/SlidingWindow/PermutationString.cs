@@ -1,4 +1,4 @@
-namespace neetcode;
+namespace Neetcode.SlidingWindow;
 
 public class PermutationString
 {
@@ -52,6 +52,7 @@ public class PermutationString
         return false;
     }
 
+    // TOTO: I asked chat gpt for a concise answer, it came up with this, try to understand!
     public bool CheckInclusion2(string permutation, string str)
     {
         if (permutation.Length > str.Length)

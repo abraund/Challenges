@@ -1,4 +1,4 @@
-namespace neetcode;
+namespace Neetcode.ArraysAndHashing;
 
 public class ThreeIntegerSum
 {
@@ -13,7 +13,7 @@ public class ThreeIntegerSum
             if (valueToPos.TryGetValue(nums[i], out var value))
                 value.Add(i);
             else
-                valueToPos[nums[i]] = new List<int>(){i};
+                valueToPos[nums[i]] = new List<int>() { i };
         }
 
         for (var i = 0; i < nums.Length; i++)
@@ -35,7 +35,7 @@ public class ThreeIntegerSum
             }
         }
 
-        return result.Select(x => new int[]{x.i, x.j, x.k}.ToList()).ToList();
+        return result.Select(x => new int[] { x.i, x.j, x.k }.ToList()).ToList();
     }
 
     [Fact]

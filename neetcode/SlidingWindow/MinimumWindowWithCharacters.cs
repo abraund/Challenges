@@ -1,4 +1,4 @@
-namespace neetcode;
+namespace Neetcode.SlidingWindow;
 
 public class MinimumWindowWithCharacters
 {
@@ -13,10 +13,10 @@ public class MinimumWindowWithCharacters
         var matchDict = t.GroupBy(x => x).ToDictionary(x => x.Key, x => 0);
         var matchQueue = new Queue<int>();
         var result = (Left: 0, Right: s.Length); // r outside possibilty
-        
+
         while (r < s.Length && l < s.Length && targetLength + l <= s.Length)
         {
-           
+
             if (matches == targetLength)
             {
                 result = result.Right - result.Left > r - l ? (l, r) : result;
@@ -39,11 +39,11 @@ public class MinimumWindowWithCharacters
                 {
                     var rMatches = matchDict[s[r]]++;
 
-                    if(rMatches < targetDict[s[r]])
+                    if (rMatches < targetDict[s[r]])
                         matches++;
                 }
 
-                if(matches != targetLength)
+                if (matches != targetLength)
                     r++;
             }
         }

@@ -2,7 +2,7 @@ using System.ComponentModel.Design;
 using System.Diagnostics;
 using System.Text;
 
-namespace neetcode;
+namespace Neetcode.ArraysAndHashing;
 
 public class StringEncodeAndDecode
 {
@@ -15,15 +15,15 @@ public class StringEncodeAndDecode
         for (var i = 0; i < strs.Count; i++)
         {
             var str = strs[i];
-                
+
             for (var j = 0; j < str.Length; j++)
             {
                 var letter = str[j];
 
                 if (letter == ESCAPE)
-                    sb.Append(new []{ESCAPE, letter});
+                    sb.Append(new[] { ESCAPE, letter });
                 else if (letter == DELIMITER)
-                    sb.Append(new []{ESCAPE, letter});
+                    sb.Append(new[] { ESCAPE, letter });
                 else
                     sb.Append(letter);
             }

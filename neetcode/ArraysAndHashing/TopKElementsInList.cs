@@ -1,11 +1,11 @@
-namespace neetcode;
+namespace Neetcode.ArraysAndHashing;
 
 public class TopKElementsInList
 {
     public int[] TopKFrequent(int[] nums, int k)
     {
         var numToCount = new Dictionary<int, int>();
-            
+
         foreach (var num in nums)
         {
             if (numToCount.TryGetValue(num, out var count))

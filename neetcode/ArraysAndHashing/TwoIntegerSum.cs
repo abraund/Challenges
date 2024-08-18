@@ -1,4 +1,4 @@
-namespace neetcode;
+namespace Neetcode.ArraysAndHashing;
 
 public class TwoIntegerSum
 {
@@ -12,7 +12,7 @@ public class TwoIntegerSum
             var partner = target - currentNum;
 
             if (numToPos.TryGetValue(partner, out var partnerPos))
-                return new [] {partnerPos + 1, i + 1};
+                return new[] { partnerPos + 1, i + 1 };
 
             numToPos[currentNum] = i;
         }
@@ -23,7 +23,7 @@ public class TwoIntegerSum
     [Fact]
     public void IncNumber()
     {
-        var result = TwoSum([1,2,3,4], 3);
-        Assert.Equal([1,2], result);
+        var result = TwoSum([1, 2, 3, 4], 3);
+        Assert.Equal([1, 2], result);
     }
 }

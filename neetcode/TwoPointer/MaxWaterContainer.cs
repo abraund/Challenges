@@ -1,4 +1,4 @@
-namespace neetcode;
+namespace Neetcode.TwoPointer;
 
 public class MaxWaterContainer
 {
@@ -47,7 +47,7 @@ public class MaxWaterContainer
 
         return maxArea;
     }
-    
+
     [Fact]
     public void Test1()
     {

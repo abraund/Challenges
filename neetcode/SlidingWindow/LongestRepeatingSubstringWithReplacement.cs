@@ -1,4 +1,4 @@
-namespace neetcode;
+namespace Neetcode.SlidingWindow;
 
 public class LongestRepeatingSubstringWithReplacement
 {

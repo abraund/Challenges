@@ -1,4 +1,4 @@
-namespace neetcode;
+namespace Neetcode.TwoPointer;
 
 public class TrappingRainWater
 {
@@ -10,7 +10,7 @@ public class TrappingRainWater
         for (int i = 0; i < heights.Length; i++)
         {
             var height = heights[i];
-            
+
             for (int j = 1; j <= height; j++)
             {
                 // resolve jets

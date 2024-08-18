@@ -1,10 +1,10 @@
-namespace neetcode;
+namespace Neetcode.ArraysAndHashing;
 
 public class ProductsOfArrayDiscludingSelf
 {
     public int[] ProductExceptSelf(int[] nums)
     {
-        var result  = new int[nums.Length];
+        var result = new int[nums.Length];
 
         var product = 1;
         for (var i = 0; i < nums.Length; i++)

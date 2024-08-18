@@ -23,7 +23,11 @@ public class StringWrap
 
     public override bool Equals(object? obj)
     {
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
         return IsAnagramPerf(((StringWrap)obj).Value, Value);
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
     }
 
     public bool IsAnagramPerf(string s, string t)

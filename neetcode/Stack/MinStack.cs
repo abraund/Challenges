@@ -1,4 +1,4 @@
-namespace neetcode;
+namespace Neetcode.Stack;
 
 public class MinStack
 {
@@ -9,7 +9,7 @@ public class MinStack
      * Think I prefer my own solution to be honest.
      */
 
-    private Node _root;
+    private Node? _root;
 
     public void Push(int val)
     {
@@ -20,17 +20,17 @@ public class MinStack
 
     public void Pop()
     {
-        _root = _root.Next;
+        _root = _root!.Next;
     }
 
     public int Top()
     {
-        return _root.Value;
+        return _root!.Value;
     }
 
     public int GetMin()
     {
-        return _root.Min;
+        return _root!.Min;
     }
 
     private class Node
@@ -59,5 +59,5 @@ public class MinStack
         Assert.Equal(2, minStack.Top());    // return 2
         Assert.Equal(1, minStack.GetMin()); // return 1
     }
-    
+
 }
