@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace neetcode;
+namespace Neetcode.Stack;
 
 public class ValidateParentheses
 {
@@ -17,7 +17,7 @@ public class ValidateParentheses
 
         foreach (var character in s)
         {
-            if(brackets.ContainsKey(character))
+            if (brackets.ContainsKey(character))
                 openStack.Push(character);
 
             if (brackets.ContainsValue(character))
@@ -27,7 +27,7 @@ public class ValidateParentheses
             }
         }
 
-        if(openStack.Any())
+        if (openStack.Any())
             return false;
 
         return true;

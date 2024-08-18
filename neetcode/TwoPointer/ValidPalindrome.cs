@@ -1,7 +1,10 @@
-namespace neetcode;
+namespace Neetcode.TwoPointer;
 
 public class ValidPalindrome
 {
+    //note the special characters, clever from leetcode guy,
+    //he stop you using a stack to solve this problem and ensures it's a two pointer problem
+
     public bool IsPalindrome(string s)
     {
         var i = 0;

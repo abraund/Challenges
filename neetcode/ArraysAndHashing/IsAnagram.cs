@@ -1,4 +1,4 @@
-namespace neetcode;
+namespace Neetcode.ArraysAndHashing;
 
 public class IsAnagram
 {
@@ -22,6 +22,7 @@ public class IsAnagram
                 return false;
         }
 
+        // extra loop could be avoided by keeping a match count, observing back
         foreach (var c in charCount)
         {
             if (c.Value != 0)

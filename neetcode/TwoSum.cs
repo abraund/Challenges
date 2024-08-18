@@ -26,7 +26,6 @@ public class TwoSum
     public void TwoSumTest()
     {
         var result = TwoSumImplm([1, 2, 8, 4, 5, 10], 7);
-        Assert.Equal(1, result[0]);
-        Assert.Equal(4, result[1]);
+        Assert.Equal([1, 4], result);
     }
 }

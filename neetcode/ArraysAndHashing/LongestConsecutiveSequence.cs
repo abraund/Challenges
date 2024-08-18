@@ -1,12 +1,12 @@
 using System.Diagnostics;
 
-namespace neetcode;
+namespace Neetcode.ArraysAndHashing;
 
 public class Range
 {
     public Range(int minimum, int maximum)
     {
-        Minimum = minimum; 
+        Minimum = minimum;
         Maximum = maximum;
     }
 

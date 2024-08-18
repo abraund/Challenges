@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace neetcode;
+namespace Neetcode.ArraysAndHashing;
 
 public class StringWrap
 {
@@ -16,7 +16,7 @@ public class StringWrap
         int hash = 17;
         foreach (var chr in Value)
         {
-            hash = hash ^ chr.GetHashCode(); 
+            hash = hash ^ chr.GetHashCode();
         }
         return hash;
     }
@@ -68,7 +68,7 @@ public class AnagramGroups
             if (baseAnagramToWord.TryGetValue(str, out var innerList))
                 innerList.Add(str);
             else
-                baseAnagramToWord[str] = new List<string>(){str};
+                baseAnagramToWord[str] = new List<string>() { str };
         }
 
         return baseAnagramToWord.Select(x => x.Value).ToList();

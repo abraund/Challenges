@@ -1,4 +1,4 @@
-namespace neetcode;
+namespace Neetcode.ArraysAndHashing;
 
 public class DuplicateInteger
 {
