@@ -4,6 +4,8 @@ public class EvaluateReversePolishNotation
 {
     public int EvalRPN(string[] tokens)
     {
+        // neetcode guy absorbs the int parse into the other conditional loop, inline the pops, makes sense
+
         var stack = new Stack<int>();
 
         foreach (var token in tokens)
