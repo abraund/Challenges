@@ -8,17 +8,17 @@ public class CarFleetSolution
     public int CarFleet(int target, int[] position, int[] speed)
     {
         var result = 0;
-        var carsByPosition = new List<(int Position, int TargetTime)>();
+        var carsByPosition = new List<(int Position, double TargetTime)>();
 
         for (int i = 0; i < position.Length; i++)
         {
-            var turnsToTarget = (int)Math.Ceiling((target - position[i]) / (double)speed[i]);
+            var turnsToTarget = (target - position[i]) / (double)speed[i];
             carsByPosition.Add((position[i], turnsToTarget));
         }
 
         carsByPosition = carsByPosition.OrderByDescending(x => x.Position).ToList();
 
-        var lastFleetTime = 0;
+        var lastFleetTime = 0d;
         foreach (var laterCar in carsByPosition)
         {
             if (laterCar.TargetTime > lastFleetTime)
@@ -59,5 +59,11 @@ public class CarFleetSolution
     public void Test5()
     {
         Assert.Equal(0, CarFleet(12, [], []));
+    }
+
+    [Fact]
+    public void Test6()
+    {
+        Assert.Equal(6, CarFleet(12, [8, 3, 7, 4, 6, 5], [4, 4, 4, 4, 4, 4]));
     }
 }
