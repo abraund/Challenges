@@ -9,18 +9,17 @@ public class LargestRectangleAreaSolution
 
         for (int i = 0; i < heights.Length; i++)
         {
-            if (!stack.Any() || heights[i] > stack.Peek().Height)
-                stack.Push((i, heights[i]));
-
+            var start = i;
             while (stack.Any() && (heights[i] < stack.Peek().Height))
             {
                 var resolve = stack.Pop();
                 var area = resolve.Height * ((i-1) - resolve.Position + 1);
                 result = Math.Max(result, area);
-                
-                if (!stack.Any() || heights[i] > stack.Peek().Height)
-                    stack.Push((resolve.Position, heights[i]));
+                start = resolve.Position;
             }
+
+            if (!stack.Any() || heights[i] > stack.Peek().Height)
+                stack.Push((start, heights[i]));
         }
 
         while (stack.Any())
