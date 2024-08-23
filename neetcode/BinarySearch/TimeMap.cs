@@ -57,10 +57,9 @@
         {
             TimeMap timeMap = new TimeMap();
             timeMap.Set("key1", "value1", 10);
-            Assert.Equal(null, timeMap.Get("key1", 1));
+            Assert.Equal("", timeMap.Get("key1", 1));
             Assert.Equal("value1", timeMap.Get("key1", 10));
             Assert.Equal("value1", timeMap.Get("key1", 11));
         }
-
     }
 }
