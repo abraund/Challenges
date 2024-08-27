@@ -58,6 +58,12 @@ public class MergeTwoSortedLinkedLists
 
         var i = list1;
         var j = list2;
+
+        // neet code guy also starts with a listnode, but he considers it a dummy,
+        // he considers next the start of his result
+        // he returns next
+        // I wonder at some point about putting the result in a list, even though I knew I would only put one thing in it, a kind of monad
+        // I feel there's a thought here
         ListNode res = new ListNode();
         ListNode cur = res;
 
