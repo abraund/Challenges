@@ -20,11 +20,9 @@ public class MergeTwoSortedLinkedLists
             }
             else
             {
-                // Initialize the first node
                 this.val = list[0];
                 ListNode current = this;
 
-                // Iterate over the rest of the list and create the linked list
                 for (int i = 1; i < list.Count; i++)
                 {
                     current.next = new ListNode(list[i]);
@@ -47,7 +45,6 @@ public class MergeTwoSortedLinkedLists
             if (next != null)
                 list.AddRange(next.ToList());
             return list;
-
         }
     }
 
