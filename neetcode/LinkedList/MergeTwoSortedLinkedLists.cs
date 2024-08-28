@@ -98,7 +98,7 @@ public class MergeTwoSortedLinkedLists
     public void Test2()
     {
         var result = MergeTwoLists(ListNode.CreateInstance([]), ListNode.CreateInstance([]));
-        Assert.Equal([], result.ToList());
+        Assert.Equal(null, result);
     }
 
 
