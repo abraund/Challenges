@@ -22,6 +22,9 @@ csharp_style_expression_bodied_local_functions = false:silent
 # xUnit2004: Do not use equality check to test for boolean conditions
 dotnet_diagnostic.xUnit2004.severity = none
 
+# xUnit2003: Do not use equality check to test for null value
+dotnet_diagnostic.xUnit2003.severity = none
+
 [*.{cs,vb}]
 #### Naming styles ####
 
