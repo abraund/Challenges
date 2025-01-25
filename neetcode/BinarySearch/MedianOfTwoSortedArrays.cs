@@ -58,10 +58,6 @@
             Assert.Equal(1, FindMedianSortedArrays([1, 2], [3]));
         }
 
-
-
-
-
         [Fact]
         public void Test3()
         {
